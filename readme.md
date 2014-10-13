@@ -14,3 +14,6 @@ You have made it to step 2. Well done grasshopper.
 ![Well done grasshopper](http://38.media.tumblr.com/tumblr_kzpd7vQ2tr1qa1xnko1_500.gif)
 
 ### So what do we have in Step 2?
+A basic tic-tac-toe game. Using some discrete mathmatics to calculate who wins and who loses.
+
+Also events for loos coupling and general awesomeness.
