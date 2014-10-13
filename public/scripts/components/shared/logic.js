@@ -1,6 +1,6 @@
 (function (export) {
     var createPlayer = function (objIn) {
-        var obj = objIn || {}
+        var obj = action.eventMe(objIn || {})
             , moves = [
                 [0,0,0]
                 , [0,0,0]

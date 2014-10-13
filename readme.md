@@ -16,4 +16,4 @@ You have made it to step 2. Well done grasshopper.
 ### So what do we have in Step 2?
 A basic tic-tac-toe game. Using some discrete mathmatics to calculate who wins and who loses.
 
-Also events for loos coupling and general awesomeness.
+Also events for loose coupling and general awesomeness.
