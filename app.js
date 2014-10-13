@@ -39,7 +39,7 @@ http.globalAgent.maxSockets = 9999;
 https.globalAgent.maxSockets = 9999;
 
 // all environments
-app.set('port', process.env.VCAP_APP_PORT || 8080);
+app.set('port', process.env.VCAP_APP_PORT || 1337);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -5,3 +5,7 @@ Welcome to the offline workshop codebase. Here we will be moving through the var
 ## Step 1
 You have made it to step 1. Well done grasshopper.
 ![Well done grasshopper](http://38.media.tumblr.com/tumblr_kzpd7vQ2tr1qa1xnko1_500.gif)
+
+### So what do we have in Step 1?
+We have a functioning node app... or we should.
+`npm start` is your friend. Run it and you should be up and running on `http://localhost:1337`.
