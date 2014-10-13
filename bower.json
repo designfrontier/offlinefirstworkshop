@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "action": "git://github.com/designfrontier/Action#v0.5.0"
+    "action": "git://github.com/designfrontier/Action#v0.5.0",
+    "seldom": "git://github.com/uniqname/seldom"
   }
 }
