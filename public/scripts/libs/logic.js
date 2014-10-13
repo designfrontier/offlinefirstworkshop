@@ -1,4 +1,4 @@
-(function (export) {
+(function (exportMe) {
     var createPlayer = function (objIn) {
         var obj = action.eventMe(objIn || {})
             , moves = [
@@ -10,6 +10,7 @@
             , checkWin = function () {
                 //Matrix determinant... math!
                 //  |A| = a(ei - fh) - b(di - fg) + c(dh - eg)
+                //  !! converts to boolean
                 //  true means a win
                 return !!(moves[0][0](moves[1][1] * moves[2][2] - moves[1][2] * moves[2][1]) - moves[0][1] (moves[1][0] * moves[2][2] - moves[1][2] * moves[2][0]) + moves[0][2](moves[1][0] * moves[2][1] - moves[1][1] * moves[2][0]));
             };
@@ -26,4 +27,6 @@
         return obj;
     };
 
-})(module && module.exports || window.ticTac)
+    exportMe = {createPlayer: createPlayer};
+
+})((typeof module !== 'undefined' && module.exports) || window.ticTac)
