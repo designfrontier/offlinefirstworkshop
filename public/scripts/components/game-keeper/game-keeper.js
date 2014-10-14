@@ -1,5 +1,5 @@
 (function () {
-    var gameKeeper = action.eventMe({
+    action.eventMe({
         init: function () {
             var that = this
                 , scoreBoard = {}
