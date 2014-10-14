@@ -15,7 +15,7 @@
                 , checkMoveCount = function(){
                     moveCount++;
 
-                    if(moveCount >= 10){
+                    if(moveCount >= 9){
                         winner.textContent = 'Cats Game :-(';
                         winner.classList.remove('hidden');
 
