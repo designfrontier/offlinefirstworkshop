@@ -2,12 +2,19 @@
     var gameKeeper = action.eventMe({
         init: function () {
             var that = this
-                , scoreBoard = {};
+                , scoreBoard = {}
+                , dom = document.querySelector('.start-game--overall');
 
             that.listen('game:win', function(id){
                 scoreBoard[id]++;
 
-                console.log('X has won: ' + scoreBoard.x + ' O has won: ' + scoreBoard.o);
+                dom.textContent = 'X: ' + scoreBoard.x + ' | O: ' + scoreBoard.o;
+
+                dom.classList.remove('hidden');
+            });
+
+            that.listen('game:reset', function(){
+                dom.classList.add('hidden');
             });
 
             that.listen('game:addplayer', function (id) {

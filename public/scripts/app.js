@@ -60,7 +60,6 @@
                 if(typeof that.players === 'undefined'){
                     //we recycle the players so no reason to recreate
                     //  after initial setup
-
                     that.players = [];
 
                     that.players.push(ticTac.createPlayer({id:'x'}));
@@ -82,8 +81,10 @@
             var row = getValueAsNumber(box.attributes['data-row'])
                 , col = getValueAsNumber(box.attributes['data-col']);
 
-            box.textContent = ticTac.game.active;
-            action.emit('game:move:' + window.ticTac.game.active, {row: row, col: col});
+            if(box.textContent === ''){
+                box.textContent = ticTac.game.active;
+                action.emit('game:move:' + window.ticTac.game.active, {row: row, col: col});
+            }
         });
     });
 
