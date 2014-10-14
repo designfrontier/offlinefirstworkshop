@@ -15,6 +15,7 @@
             }
 
             , curriedVerticalSum = function(array1, array2, array3) {
+                //not really a curried function... :-(
                 var arr1, arr2, arr3;
 
                 if(Array.isArray(array1)){
@@ -37,8 +38,6 @@
             , diagSum = function(arrayIn, leftRight){
                 var arr = [];
 
-                arr[1] = arrayIn[1][1];
-                
                 if(leftRight){
                     arr[0] = arrayIn[0][0];
                     arr[2] = arrayIn[2][2];
@@ -46,6 +45,8 @@
                     arr[0] = arrayIn[0][2];
                     arr[2] = arrayIn[2][0];
                 }
+
+                arr[1] = arrayIn[1][1];
 
                 return sum(arr);
             }
@@ -62,22 +63,25 @@
                 if (rowWin || colWin || diagWin) {
                     obj.emit('game:win', obj.id);
                 }
-            }
-
-            , setMove = function(objIn){
-                moves[objIn.row][objIn.col] = 1;
-                checkWin();
             };
 
         if( typeof obj.id === 'undefined' ){
             obj.id = 'x';
         }
 
-        obj.listen('game:move:' + obj.id, setMove);
+        obj.listen('game:move:' + obj.id, function(objIn){
+            moves[objIn.row][objIn.col] = 1;
+
+            //have I won?!
+            checkWin();
+        });
 
         obj.listen('game:reset', function() {
+            //reset my moves
             moves = [[0,0,0], [0,0,0], [0,0,0]];
         });
+
+        obj.emit('game:addplayer', obj.id);
 
         return obj;
     };

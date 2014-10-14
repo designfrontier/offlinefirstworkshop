@@ -61,8 +61,6 @@
                     //we recycle the players so no reason to recreate
                     //  after initial setup
 
-                    console.log('creating players');
-
                     that.players = [];
 
                     that.players.push(ticTac.createPlayer({id:'x'}));
