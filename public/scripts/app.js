@@ -16,20 +16,12 @@
                     moveCount++;
 
                     if(moveCount >= 9){
-                        winner.textContent = 'Cats Game :-(';
-                        winner.classList.remove('hidden');
-
+                        that.emit('game:tie');
                         that.emit('game:reset');
                     }
-                }
-
-                , winner = document.querySelector('.start-game--victor');
+                };
 
             that.listen('game:win', function(id){
-                //do something to show who wins...
-                winner.textContent = id.toUpperCase() + ' Wins!';
-                winner.classList.remove('hidden');
-
                 that.emit('game:reset');
             });
 
@@ -49,9 +41,6 @@
 
             that.listen('game:reset', function(){
                 moveCount = 0;
-
-                //display the start dialog
-                document.querySelector('.start-game').classList.remove('hidden');
             });
 
             that.listen('game:setup', function(){
@@ -86,12 +75,5 @@
                 action.emit('game:move:' + window.ticTac.game.active, {row: row, col: col});
             }
         });
-    });
-
-    document.querySelector('.start-game--button').addEventListener('click', function(){
-        //set up the game
-        ticTac.game.emit('game:setup');
-
-        document.querySelector('.start-game').classList.add('hidden');
     });
 })()

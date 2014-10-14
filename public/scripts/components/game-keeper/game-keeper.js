@@ -3,13 +3,12 @@
         init: function () {
             var that = this
                 , scoreBoard = {}
-                , dom = document.querySelector('.start-game--overall');
+                , dom = document.querySelector('.game-keeper');
 
             that.listen('game:win', function(id){
                 scoreBoard[id]++;
 
                 dom.textContent = 'X: ' + scoreBoard.x + ' | O: ' + scoreBoard.o;
-
                 dom.classList.remove('hidden');
             });
 
