@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "node ./bin/www"
+    "test": "gulp test"
   },
   "engines": {
     "cfNpmInstall": false,
@@ -25,12 +25,5 @@
     "csurf": "^1.1.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-mocha-test": "~0.9.0",
-    "grunt-nsp-package": "0.0.5",
-    "grunt-release": "~0.3.1",
-    "grunt-retire": "^0.2.6"
   }
 }

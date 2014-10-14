@@ -17,7 +17,7 @@ var appName = 'offline'
 
     // Import routes here
     , routes = require('./routes')
-    , users = require('./routes/users')
+    , built = require('./routes/built')
 
     // Create the express app
     , app = express();
@@ -66,7 +66,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Map routes here
 app.use('/', routes);  // Examples only, replace with your own
-app.use('/users', users); // Also an example
+app.use('/built', built); // Also an example
 
 // development error handler
 // will print stacktrace
