@@ -3,7 +3,8 @@
         init: function () {
             var that = this
                 , scoreBoard = {}
-                , dom = document.querySelector('.game-keeper');
+                , dom = document.querySelector('.game-keeper')
+                , localforage = window.localforage;
 
             that.listen('game:win', function(id){
                 scoreBoard[id]++;
