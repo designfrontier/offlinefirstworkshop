@@ -1,13 +1,5 @@
 (function(){
-    var boxes = document.querySelectorAll('.game-board--box')
-        
-        , getValueAsNumber = function (attribIn) {
-            return parseInt(attribIn.value, 10);
-        };
-
-    window.ticTac = {};
-
-    window.ticTac.game = action.eventMe({
+    action.eventMe({
         init: function(){
             var that = this
                 , moveCount = 0
@@ -19,7 +11,25 @@
                         that.emit('game:tie');
                         that.emit('game:reset');
                     }
-                };
+                }
+                
+                , getValueAsNumber = function (attribIn) {
+                    return parseInt(attribIn.value, 10);
+                }
+
+                , boxes = document.querySelectorAll('.game-board--box');
+
+            [].forEach.call(boxes, function(box){
+                box.addEventListener('click', function(){
+                    var row = getValueAsNumber(box.attributes['data-row'])
+                        , col = getValueAsNumber(box.attributes['data-col']);
+
+                    if(box.textContent === ''){
+                        box.textContent = that.active;
+                        action.emit('game:move:' + that.active, {row: row, col: col});
+                    }
+                });
+            });
 
             that.listen('game:win', function(id){
                 that.emit('game:reset');
@@ -46,13 +56,11 @@
             that.listen('game:setup', function(){
                 that.active = 'x';
 
-                if(typeof that.players === 'undefined'){
-                    //we recycle the players so no reason to recreate
-                    //  after initial setup
-                    that.players = [];
+                if(!that.setup){
+                    that.setup = true;
 
-                    that.players.push(ticTac.createPlayer({id:'x'}));
-                    that.players.push(ticTac.createPlayer({id:'o'}));
+                    that.emit('game:newplayer', 'x');
+                    that.emit('game:newplayer', 'o');
                 }
 
                 //reset the board
@@ -63,17 +71,5 @@
                 that.emit('game:start');
             });
         }
-    });
-
-    [].forEach.call(boxes, function(box){
-        box.addEventListener('click', function(){
-            var row = getValueAsNumber(box.attributes['data-row'])
-                , col = getValueAsNumber(box.attributes['data-col']);
-
-            if(box.textContent === ''){
-                box.textContent = ticTac.game.active;
-                action.emit('game:move:' + window.ticTac.game.active, {row: row, col: col});
-            }
-        });
     });
 })()

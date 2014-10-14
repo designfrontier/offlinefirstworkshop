@@ -16,9 +16,9 @@
                 dom.classList.add('hidden');
             });
 
-            that.listen('game:addplayer', function (id) {
-                if(typeof scoreBoard[id] === 'undefined'){
-                    scoreBoard[id] = 0;
+            that.listen('game:addplayer', function (obj) {
+                if(typeof scoreBoard[obj.id] === 'undefined'){
+                    scoreBoard[obj.id] = 0;
                 }
             });
         }
