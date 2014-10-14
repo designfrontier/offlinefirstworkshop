@@ -17,3 +17,7 @@ You have made it to step 2. Well done grasshopper.
 A basic tic-tac-toe game. Using some discrete mathmatics to calculate who wins and who loses.
 
 Also events for loose coupling and general awesomeness.
+
+Lots of new files:
+
+1. 

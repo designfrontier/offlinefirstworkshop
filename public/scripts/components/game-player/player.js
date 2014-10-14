@@ -1,4 +1,4 @@
-(function (exportMe) {
+(function (exportMe) { //TODO: make this blind and evented for creation
     var createPlayer = function (objIn) {
         var obj = action.eventMe(objIn || {})
             , moves = [[0,0,0], [0,0,0], [0,0,0]]
