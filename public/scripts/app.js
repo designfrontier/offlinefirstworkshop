@@ -3,6 +3,7 @@
         init: function(){
             var that = this
                 , moveCount = 0
+                , boxes = document.querySelectorAll('.game-board--box')
 
                 , checkMoveCount = function(){
                     moveCount++;
@@ -15,10 +16,9 @@
                 
                 , getValueAsNumber = function (attribIn) {
                     return parseInt(attribIn.value, 10);
-                }
+                };
 
-                , boxes = document.querySelectorAll('.game-board--box');
-
+            //these are the click events that drive the game
             [].forEach.call(boxes, function(box){
                 box.addEventListener('click', function(){
                     var row = getValueAsNumber(box.attributes['data-row'])
@@ -31,6 +31,7 @@
                 });
             });
 
+            //listeners for the game mechanics
             that.listen('game:win', function(id){
                 that.emit('game:reset');
             });
@@ -56,6 +57,8 @@
             that.listen('game:setup', function(){
                 that.active = 'x';
 
+                //once we have the players setup we don't need
+                //  to create more players
                 if(!that.setup){
                     that.setup = true;
 
