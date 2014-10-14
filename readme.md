@@ -28,6 +28,8 @@ You have made it to step 3. Well done grasshopper.
 ### So what do we have in Step 3?
 A working build, and some appcache goodness.
 
-Some new files:
+Some new files to check out:
 
-1. 
+1. /views/built.ejs
+1. /gulpfile.js
+1. /package.json
