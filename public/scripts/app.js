@@ -26,7 +26,7 @@
 
                     if(box.textContent === ''){
                         box.textContent = that.active;
-                        action.emit('game:move:' + that.active, {row: row, col: col});
+                        that.emit('game:move:' + that.active, {row: row, col: col});
                     }
                 });
             });
