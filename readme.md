@@ -28,8 +28,13 @@ You have made it to step 3. Well done grasshopper.
 ### So what do we have in Step 3?
 A working build, and some appcache goodness.
 
+run `gulp build` and check it out! You will need to edit one line in the `manifest.appcache` it generates in the `/built` folder. In the `CACHE` `section add /global-libs/action/packages/latest/action.min.js`
+
+Now hitting `/built` even works when you shut off the node server because it is cached by the appcache.
+
 Some new files to check out:
 
 1. /views/built.ejs
 1. /gulpfile.js
 1. /package.json
+1. /public/built/manifest.appcache
