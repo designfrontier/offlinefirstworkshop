@@ -6,11 +6,21 @@
                 , dom = document.querySelector('.game-keeper')
                 , localforage = window.localforage;
 
+            //get the scoreboard from local db
+            localforage.getItem('scoreboard').then(function(doc){
+                if(doc !== null && typeof doc !== 'undefined'){
+                    scoreBoard = doc;
+                }
+            });
+
             that.listen('game:win', function(id){
                 scoreBoard[id]++;
 
                 dom.textContent = 'X: ' + scoreBoard.x + ' | O: ' + scoreBoard.o;
                 dom.classList.remove('hidden');
+
+                //persist this offline
+                localforage.setItem('scoreboard', scoreBoard);
             });
 
             that.listen('game:reset', function(){
