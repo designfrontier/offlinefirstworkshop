@@ -1,6 +1,7 @@
 html, body{
     height: 100%;
     margin:0;
+    font-family: sans-serif;
 }
 
 .game-board{
@@ -18,6 +19,12 @@ html, body{
     float: left;
     margin-left: 2%;
     margin-top: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4em;
 }
 
 .start-game{
@@ -31,6 +38,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction:column;
 }
 
 .start-game--button{
@@ -39,6 +47,13 @@ html, body{
     padding:.5em 1em;
     font-size: 2em;
     border:none;
+}
+
+.start-game--victor{
+    background: rgb(0,250,255);
+    color: rgb(30,30,30);
+    padding:.5em 1em;
+    margin-bottom: 1em;
 
 }
 

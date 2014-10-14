@@ -15,7 +15,6 @@
 
             , setMove = function(objIn){
                 moves[objIn.row][objIn.col] = 1;
-                console.log(objIn);
                 checkWin();
             };
 
