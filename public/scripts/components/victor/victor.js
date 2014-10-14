@@ -1,5 +1,5 @@
 (function () {
-    var victor = action.eventMe({
+    action.eventMe({
         init: function () {
             var that = this
                 , dom = document.querySelector('.victor');
