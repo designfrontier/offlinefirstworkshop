@@ -53,7 +53,8 @@ html, body{
     background: rgb(0,250,255);
     color: rgb(30,30,30);
     padding:.5em 1em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
+    font-size: 3em;
 
 }
 
