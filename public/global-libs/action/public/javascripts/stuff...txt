@@ -1,0 +1,112 @@
+stuff...
+
+Data Object for event Store
+store: {
+	'event:name': [
+		{
+			once: true/false
+			, call: function(){}
+			, scope: the this for this object
+		}
+	]
+}
+
+local events:
+When triggered locally events only fire local listeners
+the only difference is what store they are placed in.
+The local store or the global store.
+
+trace:
+console.logs out the emitter of the event by looking up it's emitterId
+Needs to have an emitterId registry, and search function...
+
+
+SILENCE
+-----------------------------------------------------
+
+Calling the silence/silenceLocal function:
+-----------------------------------------------------
+object.silence('name:event')
+	or
+object.silence('name:event', function(){})
+	or
+object.silence('name:event', function(){}, scope)
+	or
+object.silence('name:event', function(){}, scope, once)
+	or
+object.silence('name:event', function(){}, scope, once, local)
+
+
+
+Passing an Object into the silence/silenceLocal function:
+-----------------------------------------------------
+object.silence({
+	eventName: 'name:event'
+	, handler: function(){alert('word')}
+	, scope: this
+	, once: true/false
+	, local: true/false
+})
+
+
+
+LISTEN
+-----------------------------------------------------
+
+Calling the listen function:
+-----------------------------------------------------
+
+
+Passing an Object into the listen function:
+-----------------------------------------------------
+object.listen({
+	eventName: 'name:event'
+	, handler: function(){}
+	, scope: this
+	, once: true/false
+	, local: true/false
+})
+
+
+MODELS
+-----------------------------------------------------
+Models are responsible for getting themselves and for other operations that belong to them. They are encapsulated data holders. No rendering, just data. They have internal events that can be listened to (created, retrieved, updated, saved, destroyed) and they can trigger global events.
+
+model structure looks like:
+model: {
+	emitterID
+	attributes (private)
+	get: function()
+	set: function() (updates via an object or key value pair)
+	flatten: function() (returns just the attributes)
+	clear: function()
+	destroy: function()
+	changes: function() (returns the attributes that have been changed in an array)
+	fetch: function() (gets this thing form somwehere)
+	save: function() (saves to server)
+}
+
+
+TRACE
+-----------------------------------------------------
+Trace provides a way to find out who is triggering an event. Every event emitter is assigned an emitterid that can be found by inspecting the object. It is included with all the events that the emitter triggers so that you can find out who is emitting the event if needed. You do this by using aciton.trace(emitterID).
+
+When you run the trace function the object that does the emitting is assigned to action.traced.stack.
+
+
+
+TODO list
+	1. simplify and combine common functional elements to reduce this
+	2. consider rearranging the params for silence
+	3. make sure that all the cases are handled in silence with the ability to pass in an object
+	4. prevent zombies
+	5. integrate the dependency injection system from SM
+	6. DOM rendering... maybe have this be up to the user what framework they use
+	7. a way to retrieve the model from the server if wanted
+	8. Global error handler...
+	9. make model.destroy() work
+
+Other TODOs exist in the app code
+
+Might need to write a new Testing framework to handle the wackiness of events...
+

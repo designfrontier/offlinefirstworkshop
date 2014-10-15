@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title></title>
+			<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<p class="call me ishmael">Lorem ipsum Sunt consequat exercitation aliquip sed proident consectetur deserunt in magna nulla pariatur deserunt id enim anim aute voluptate exercitation id reprehenderit laboris cupidatat incididunt laboris nisi reprehenderit eiusmod officia incididunt irure nostrud pariatur aliqua adipisicing laborum quis aliquip cupidatat officia anim sed velit in proident sed ut officia do ullamco occaecat mollit nisi proident deserunt et sint laborum elit eiusmod laboris amet proident quis deserunt reprehenderit amet nisi sunt sit qui nostrud dolore id cillum aliquip Duis sint sunt sint ea ad labore eu commodo quis do Ut culpa elit laborum officia sit minim occaecat Duis consectetur magna esse laborum anim qui Ut cupidatat dolore in sed mollit Excepteur commodo esse in consequat Duis do pariatur dolor minim Ut cupidatat nulla elit anim anim anim elit ad sed amet proident cillum adipisicing id labore culpa nisi esse fugiat nostrud quis velit culpa est officia dolor labore fugiat dolore do ad do magna magna magna id enim ad nostrud est veniam laborum commodo reprehenderit nulla reprehenderit sunt adipisicing sunt sunt quis aliqua reprehenderit ut quis voluptate veniam deserunt elit cupidatat labore sed nostrud et cillum ullamco laboris qui amet qui anim aliquip sed in laboris ex.</p>
+
+		<p>Lorem ipsum Ea cillum in elit ad id tempor culpa ex consectetur eu laboris Ut in labore irure est officia officia qui dolor deserunt laboris dolore sed ullamco adipisicing occaecat mollit sint minim sed ex id eu adipisicing sed proident cillum irure deserunt dolore eu officia dolore laborum do nisi ut Duis incididunt enim est elit in incididunt aliqua nulla dolor velit velit ex qui anim nulla veniam commodo et anim ut dolor in dolore sint ullamco anim reprehenderit irure laboris veniam et amet nostrud exercitation voluptate dolor dolore minim consequat Duis ad culpa in minim consectetur Excepteur culpa culpa mollit sed incididunt ullamco voluptate deserunt enim irure cupidatat in ut sint dolor adipisicing in dolore ad consequat reprehenderit sunt dolor sint irure in occaecat labore labore eiusmod anim sunt est mollit dolore labore id cupidatat elit enim sunt in commodo dolore sed cillum consectetur Ut commodo eu minim veniam Excepteur minim nostrud fugiat quis adipisicing consectetur aliquip Ut ad.</p>
+
+		<figure>
+			<img src="//fillmurray.com/600/400" alt="" />
+			<figcaption>Lorem ipsum Dolore dolore voluptate ea.</figure>
+		</figure>
+		<p>Lorem ipsum Officia id commodo fugiat consectetur tempor id deserunt minim in consequat officia laboris veniam do magna laboris Duis culpa ullamco ut ullamco labore mollit non tempor irure veniam culpa in esse non commodo tempor dolor qui cillum eu minim sed ex in Ut cillum reprehenderit Excepteur irure ullamco sint in non irure ut irure labore consequat officia fugiat eiusmod non in anim incididunt ut eu voluptate anim officia dolore tempor eu qui nostrud et deserunt Ut elit exercitation consequat veniam cupidatat aliquip cillum id ullamco consequat consequat labore elit ut magna minim do incididunt dolor cillum Duis Ut nostrud id reprehenderit aliquip occaecat adipisicing laborum ea dolore non culpa commodo pariatur consequat ex ea irure cillum qui occaecat fugiat proident id ea do consequat ut anim eiusmod veniam dolor laborum id et ullamco quis irure occaecat irure qui sint dolor aliqua ad est consequat nostrud aute anim labore esse exercitation ullamco ullamco dolor pariatur dolor ut dolor dolor nisi eiusmod anim ad non aliqua id exercitation incididunt est amet dolore ut Duis nostrud est dolor veniam occaecat mollit Excepteur occaecat eiusmod Ut esse in laboris in ut.</p>
+		<ul>
+			<li>Lorem ipsum In eu sit dolor incididunt deserunt esse et tempor incididunt labore sed in eu velit Excepteur consequat eiusmod.</li>
+			<li>Lorem ipsum In cupidatat in dolor Excepteur adipisicing occaecat labore proident velit.</li>
+			<li>Lorem ipsum Incididunt reprehenderit velit exercitation laboris commodo nostrud officia fugiat officia labore velit dolore proident fugiat ad in sunt ut Ut.</li>
+			<li>Lorem ipsum Magna esse adipisicing Duis dolor Ut velit incididunt culpa enim anim in in cupidatat occaecat consequat tempor nostrud minim.</li>
+			<li>Lorem ipsum Reprehenderit dolore Excepteur Duis sed qui in est irure aliquip.</li>
+			<li>Lorem ipsum Aliqua non enim Ut minim ullamco fugiat enim sunt et dolore ut nisi cupidatat in consequat culpa.</li>
+			<li>Lorem ipsum Incididunt tempor dolor nostrud laborum consectetur incididunt sint deserunt est aliquip sint dolor.</li>
+			<li>Lorem ipsum Dolore dolore esse reprehenderit Excepteur deserunt Excepteur laboris sint tempor sunt ad Duis ut ex.</li>
+		</ul>
+	</body>
+	<script src="<%= selDOMjs %>" ></script>
+	<script>
+		selDOM("p").html("<i>HTML</i>").each(function (i, el) {
+			console.log($(this).text("text"));
+		});
+		console.log(selDOM("li").addClass("added").attr('class'));
+	</script>
+</html>

@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+
+CACHE:
+/built/
+/built/app.js
+/built/style.css
+/global-libs/action/packages/latest/action.min.js
+
+
+NETWORK:
+http://*
+https://*
+*
+
+# hash: dc1c2194549ac4ef6be1a9902ab6ac0c856980ff511b47422b6f187ff7fef368

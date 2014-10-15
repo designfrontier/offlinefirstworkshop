@@ -1,0 +1,13 @@
+{
+  "name": "seldom",
+  "homepage": "https://github.com/uniqname/seldom",
+  "_release": "d78026661c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d78026661c7ebb5cb9ab3c77cd77a6b9f21457ac"
+  },
+  "_source": "git://github.com/uniqname/seldom.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/uniqname/seldom"
+}
