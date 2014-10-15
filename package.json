@@ -16,21 +16,10 @@
     "helmet": "~0.4.0",
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
-    "lds-wam": "~0.0.2",
     "q": "~1.0.0",
-    "lds-cf-service-config": "0.1.2",
-    "lds-logger": "0.1.0",
     "body-parser": "~1.6.5",
-    "errorhandler": "~1.0.0",
-    "csurf": "^1.1.0"
+    "errorhandler": "~1.0.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-mocha-test": "~0.9.0",
-    "grunt-nsp-package": "0.0.5",
-    "grunt-release": "~0.3.1",
-    "grunt-retire": "^0.2.6"
   }
 }
