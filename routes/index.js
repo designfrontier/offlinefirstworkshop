@@ -1,5 +1,4 @@
-var logger = require('lds-logger').logger
-    , express = require('express')
+var express = require('express')
     , router = express.Router();
 
 /*
