@@ -9,7 +9,11 @@ var appName = 'offline'
     , json = bodyParser.json
     , urlencoded = bodyParser.urlencoded
     , errorHandler = require('errorhandler')
+    , logger = require('lds-logger').createLogger(appName)
     , helmet = require('helmet') // CSP Security library
+    , wam = require('lds-wam')
+    , csurf = require('csurf')
+    , configs = require('lds-cf-service-config') // Your service configurations will be here
 
     // Import routes here
     , routes = require('./routes')
@@ -57,6 +61,7 @@ app.use(helmet.csp({
 app.use(helmet.xssFilter());
 app.disable('x-powered-by');
 
+app.use(wam());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Map routes here
