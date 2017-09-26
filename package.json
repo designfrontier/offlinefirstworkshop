@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "node ./bin/www"
+    "test": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "cfNpmInstall": false,
@@ -14,7 +16,7 @@
   "dependencies": {
     "express": "~4.15.3",
     "helmet": "~3.6.1",
-    "debug": "~0.7.4",
+    "debug": "~2.6.9",
     "ejs": "~0.8.5",
     "lds-wam": "~0.0.2",
     "q": "~1.0.0",
@@ -22,7 +24,8 @@
     "lds-logger": "0.1.0",
     "body-parser": "~1.6.5",
     "errorhandler": "~1.0.0",
-    "csurf": "^1.1.0"
+    "csurf": "^1.1.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -32,5 +35,6 @@
     "grunt-nsp-package": "0.0.5",
     "grunt-release": "~0.3.1",
     "grunt-retire": "^0.2.6"
-  }
+  },
+  "snyk": true
 }
