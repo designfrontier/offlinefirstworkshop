@@ -12,8 +12,8 @@
     "npm": "= 1.2.12"
   },
   "dependencies": {
-    "express": "~4.15.3",
-    "helmet": "~3.6.1",
+    "express": "~4.16.0",
+    "helmet": "~3.8.2",
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
     "lds-wam": "~0.0.2",
