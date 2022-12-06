@@ -12,7 +12,7 @@
     "npm": "= 1.2.12"
   },
   "dependencies": {
-    "express": "~4.15.3",
+    "express": "~4.17.3",
     "helmet": "~3.6.1",
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
@@ -20,7 +20,7 @@
     "q": "~1.0.0",
     "lds-cf-service-config": "0.1.2",
     "lds-logger": "0.1.0",
-    "body-parser": "~1.6.5",
+    "body-parser": "~1.19.2",
     "errorhandler": "~1.0.0",
     "csurf": "^1.1.0"
   },
